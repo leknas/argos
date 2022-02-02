@@ -1,0 +1,44 @@
+/**
+ * @file styles/soap2.less
+ *
+ * Copyright (c) 2022 SOAP2 Project
+ * Distributed under the GNU GPL v2.
+ *
+ * @brief stylesheet for SOAP2 footer
+ *
+ */
+
+@soap2-bg: #012233;
+@soap2-color: #dbdbdb;
+@soap2-blue: #488ac7;
+@soap2-yellow: #e9b44c;
+
+.soap2-footer {
+    background-color: @soap2-bg;
+    color: @soap2-color;
+    & a {
+        color: @soap2-blue;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+            color: @soap2-yellow;
+        }
+        &.soap2 {
+            display: block;
+            padding-right: 1em;
+            float: left;
+        }
+    }
+    & p {
+        margin-bottom: 0;
+        margin-top: -6px;
+        line-height: 1.6;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 776px) {
+    .soap2-footer .university {
+        margin-top: 2rem;
+    }
+}

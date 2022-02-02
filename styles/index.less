@@ -1,0 +1,162 @@
+/**
+ * @file styles/index.less
+ *
+ * Copyright (c) 2022 SOAP2 Project
+ * Distributed under the GNU GPL v2.
+ *
+ * @brief argos stylesheet & importing SOAP2 stylesheet
+ *
+ */
+
+@font-sans:         'Roboto', sans-serif;
+@font-serif:        'EB Garamond', serif;
+@homepage-image-ht: 400px;
+@homepage-image-pd: 350px;
+@sidebar-top: 150px;
+@secondary: #aedeec;
+
+.sticky-top, .homepage-issue-description-wrapper {
+    background-color: @light-grey;
+}
+
+.navbar-logo {
+    padding-bottom: .5em;
+}
+
+.navbar-logo img {
+    max-height: 130px;
+}
+
+.navbar-brand img {
+    max-height: 2em;
+}
+
+#primaryNav {
+    padding-top: 0;
+    padding-bottom: .5em
+}
+
+#primaryNav .nav-link {
+    padding: .5rem;
+}
+
+.dropdown-menu[aria-labelledby="navMenuDropdown2"] {
+    z-index: 1021;
+}
+
+.content .content .col-lg-9 {
+    flex: 0 0 100%;
+}
+
+.homepage-image img {
+    height: @homepage-image-ht;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.container-homepage-issue {
+    margin-top: unset;
+    padding-top: 1rem;
+}
+
+.homepage-issue-cover,
+.page-issue-cover {
+    max-width: 100%;
+}
+
+.homepage-issue-description-more {
+    bottom: 0rem;
+}
+
+@media(min-width: 992px) {
+    .container-hompege-issue-before-image {
+        margin-top: @homepage-image-pd;
+    }
+    
+    .homepage-image-container .sidebar {
+        margin-top: @homepage-image-ht + 100;
+    }
+
+    .homepage-image img {
+        height: @homepage-image-ht + 100;
+    }
+
+    .homepage-image-behind-issue {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        max-height: 500px;
+        overflow-y: hidden;
+    }
+}
+
+.card-img-top.issue-summary-cover,
+.article-details-block.article-details-cover img {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.sidebar .pkp_block{
+    background-color: @faded-grey;
+    margin-bottom: 1rem;
+}
+
+.pkp_block {
+    width: 100%;
+    flex: none;
+}
+
+.site-footer {
+    margin-top: unset;
+}
+
+.homepage-image-behind-issue::after {
+    content: unset;
+}
+
+.homepage-announcements, .homepage-additional-content {
+    background-color: @light-grey;
+}
+
+.homepage-issue-description::after {
+    background-image: linear-gradient(rgba(255,255,255,0), #f7f7f7 60%);
+    height: 200px;
+}
+
+.homepage-announcements h3 {
+    margin-top: unset;
+}
+
+.homepage-announcement, .article-summary {
+    background-color: @secondary;
+}
+
+.issue-toc-section-title {
+    font-family: @font-serif;
+}
+.article-summary-title {
+    font-size: 1.5rem;
+}
+
+.article-summary-abstract {
+    background-color: lightblue;
+}
+.article-summary-abstract-heading .arrow {
+    font-size: 12px;
+    display: block;
+    height: 15px;
+    float: left;
+    width: 1.5em;
+    margin-top: 5px;
+    transition-duration: .5s;
+}
+
+.article-summary-abstract-heading.collapsed .arrow {
+    transform:rotateX(180deg);
+}
+
+.site-footer {
+    background-color: @primary;
+}
+
+@import "soap2";
